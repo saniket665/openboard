@@ -110,7 +110,7 @@ undo.addEventListener("click", (e) => {
         redoundoArr: redoundo
     }
     socket.emit("undo", trackObj);
-    undoRedoWork(trackObj);
+    // undoRedoWork(trackObj);
 })
 redo.addEventListener("click", (e) => {
     if(track < redoundo.length-1) track++;
@@ -119,7 +119,7 @@ redo.addEventListener("click", (e) => {
         redoundoArr: redoundo
     }
     socket.emit("redo", trackObj);
-    undoRedoWork(trackObj);
+    // undoRedoWork(trackObj);
 })
 eraser.addEventListener("click", (e) => {
     eraserActive = true;
