@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #292929;
+}
+i {
+    cursor: pointer;
+}
+.nav {
+    /* display: none; */
+    height: 3.5rem;
+    width: 100vw;
+    background-color: #000000d9;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.icons {
+    display: flex;
+}
+.icon-cont {
+    height: 100%;
+    padding: 0 0.7rem 0 0.5rem;
+    position: relative;
+}
+.redo-undo {
+    display: flex;
+}
+.redo, .undo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+.undo-icon, .redo-icon, .download-icon {
+    color: white;
+    font-size: 1.7rem;
+}
+.eraser-cont {
+    height: 100%;
+    padding: 0 0.7rem;
+    position: relative;
+}
+.eraser {
+    font-size: 2rem;
+    transform: rotate(-45deg);
+    color: white;
+}
+.icon {
+    width: 2rem;
+    color: white;
+    font-size: 2.5rem;
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 0.6rem;
+    left: 0;
+}
+.pen-size, .eraser-size {
+    color: black;
+    position: absolute;
+    bottom: 2px;
+    right: 1px;
+    width: 18px;
+    height: 13px;
+    border-radius: 3px;
+}
+.pink {
+    color: pink;
+}
+.white {
+    color: white;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.orange {
+    color: orange;
+}
+.yellow {
+    color: yellow;
+}
+.active {
+    background-color: #707070;
+}
+.active > .icon {
+    bottom: 0.1rem;
+}
+.download-cont {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0rem 1rem;
+}
