@@ -109,6 +109,7 @@ undo.addEventListener("click", (e) => {
         tVal: track,
         redoundoArr: redoundo
     }
+    socket.emit("undo", trackObj);
     undoRedoWork(trackObj);
 })
 redo.addEventListener("click", (e) => {
@@ -117,6 +118,7 @@ redo.addEventListener("click", (e) => {
         tVal: track,
         redoundoArr: redoundo
     }
+    socket.emit("redo", trackObj);
     undoRedoWork(trackObj);
 })
 eraser.addEventListener("click", (e) => {
@@ -153,6 +155,12 @@ function changePenWidth(e) {
     penWidth = e.target.value;
     tool.lineWidth = penWidth;
 }
+socket.on("redo", (obj) => {
+    undoRedoWork(obj);
+})
+socket.on("undo", (obj) => {
+    undoRedoWork(obj);
+})
 function undoRedoWork(obj) {
     let t = obj.tVal;
     let a = obj.redoundoArr;

@@ -18,4 +18,10 @@ io.on("connection", (socket) => {
     socket.on("move", (data) => {
         io.sockets.emit("move", data);
     })
+    socket.on("undo", (obj) => {
+        io.sockets.emit("undo", obj);
+    })
+    socket.on("redo", (obj) => {
+        io.sockets.emit("redo", obj);
+    })
 })
